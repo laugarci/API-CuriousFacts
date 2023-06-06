@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  p {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #fun-fact-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #fun-fact-btn:hover {
+    background-color: #45a049;
+  }
+  
