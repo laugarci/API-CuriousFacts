@@ -1,30 +1,63 @@
+@font-face {
+  font-family: 'Another Typewriter';
+  src: url('/fonts/atwriter.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+  --light-yellow: #FFAD2B;
+  --dark-yellow: #B56F00;
+  --red: #F23030;
+  --black: #151515;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-  }
+  font-family: 'Itim';
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  height: 4rem;
+  width: 100%;
+  color: white;
+  background-color: var(--dark-yellow);
+}
+
+.header-links {
+  display: none;
+}
+
+.text-fun-fact {
+  color: var(--black);
+  font-size: 18px;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 6px #C6C6C6;
+  padding: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
   
-  h1 {
-    color: #333;
-  }
-  
-  p {
-    color: #777;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  #fun-fact-btn {
-    background-color: #4CAF50;
+  .btn-fun-fact {
+    background-color: var(--red);
     color: white;
+    font-family: 'Another Typewriter';
     border: none;
+    border-radius: 20%;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
   }
-  
-  #fun-fact-btn:hover {
-    background-color: #45a049;
+
+  footer {
+    background-color: var(--dark-yellow);
+    height: 4rem;
   }
-  
