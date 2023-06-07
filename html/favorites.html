@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/favorites.css">
+    
+    <title>Fun Facts</title>
 </head>
 <body>
     <header>
+        <img src="/img/logo.png">
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801;
+        </label>
+
+        <nav class="menu">    
+         <a href="/html/index.html">Home</a>
+            <a href="">Favorites</a>
+            <label for="check" class="esconder-menu">
+                &#215;
+            </label>
+        </nav>
+      
     </header>
-    <main> 
+    <main>
+    <h2>Favorites</h2>
+    <p class="text-fun-fact" id="fun-fact"></p>
+    <button class="btn-fun-fact" id="fun-fact-btn">Fun Fact</button>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
+    <script src="/js/index.js"></script>
 </body>
 </html>
