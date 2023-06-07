@@ -1,6 +1,7 @@
 const funFact = document.getElementById("fun-fact");
 const btnfunFact = document.getElementById("fun-fact-btn");
 const likeHeart = document.getElementById("like-heart");
+const likeHeartFull = document.getElementById("like-heart-full");
 
 let audio = new Audio("../sounds/typewritter.mp3");
 
@@ -30,6 +31,7 @@ function getfunFact() {
       audio.play();
       funFact.textContent = "";
       likeHeart.style.visibility = "hidden";
+      likeHeart.classList.remove("clicked");
       typeWriterEffect(data.text, 50);
     })
     .catch(error => {
@@ -37,7 +39,14 @@ function getfunFact() {
     });
 }
 
+likeHeart.addEventListener("click", () => {
+  likeHeart.style.visibility = "hidden"; 
+  likeHeartFull.style.visibility = "visible";
+});
+
 btnfunFact.addEventListener("click", () => {
   audio.pause();
   getfunFact();
+  likeHeart.style.visibility = "visible";
+  likeHeartFull.style.visibility = "hidden";
 });

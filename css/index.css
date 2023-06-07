@@ -61,8 +61,17 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 24px;
-  color: red;
+  font-size: 35px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#like-heart-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+  cursor: pointer;
   visibility: hidden;
 }
 
@@ -79,26 +88,27 @@ h2 {
   background-color: white;
   font-family: 'Another Typewriter';
   letter-spacing: 0.3rem;
+  position: relative;
 }
   
-  .btn-fun-fact {
-    margin-top: 2rem;
-    background-color: var(--red);
-    color: white;
-    font-family: 'Another Typewriter';
-    border: none;
-    border-radius: 20%;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 3rem;
-    height: 3rem;
-    width: 8rem;
+.btn-fun-fact {
+  margin-top: 2rem;
+  background-color: var(--red);
+  color: white;
+  font-family: 'Another Typewriter';
+  border: none;
+  border-radius: 20%;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  height: 3rem;
+  width: 8rem;
   }
 
   footer {
-    background-color: var(--dark-yellow);
-    height: 3rem;
-    margin-top: auto;
+  background-color: var(--dark-yellow);
+  height: 3rem;
+  margin-top: auto;
   }
