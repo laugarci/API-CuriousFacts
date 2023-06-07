@@ -2,6 +2,7 @@ const funFact = document.getElementById("fun-fact");
 const btnfunFact = document.getElementById("fun-fact-btn");
 const likeHeart = document.getElementById("like-heart");
 const likeHeartFull = document.getElementById("like-heart-full");
+const savedFactsKey = "savedFacts";
 
 let audio = new Audio("../sounds/typewritter.mp3");
 
@@ -39,9 +40,41 @@ function getfunFact() {
     });
 }
 
+function saveFact(fact) {
+    let savedFacts = localStorage.getItem(savedFactsKey);
+    if (savedFacts) {
+      savedFacts = JSON.parse(savedFacts);
+    } else {
+      savedFacts = [];
+    }
+    savedFacts.push([fact]);
+    localStorage.setItem(savedFactsKey, JSON.stringify(savedFacts));
+  }
+  
+  function removeFact(fact) {
+    let savedFacts = localStorage.getItem(savedFactsKey);
+    if (savedFacts) {
+      savedFacts = JSON.parse(savedFacts);
+      const index = savedFacts.findIndex(item => item[0] === fact);
+      if (index > -1) {
+        savedFacts.splice(index, 1);
+        localStorage.setItem(savedFactsKey, JSON.stringify(savedFacts));
+      }
+    }
+  }
+
 likeHeart.addEventListener("click", () => {
-  likeHeart.style.visibility = "hidden"; 
+  likeHeart.style.visibility = "hidden";
   likeHeartFull.style.visibility = "visible";
+  const fact = funFact.textContent;
+  saveFact(fact);
+});
+
+likeHeartFull.addEventListener("click", () => {
+  const fact = funFact.textContent;
+  removeFact(fact);
+  likeHeart.style.visibility = "visible";
+  likeHeartFull.style.visibility = "hidden";
 });
 
 btnfunFact.addEventListener("click", () => {
