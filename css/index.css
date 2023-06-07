@@ -57,6 +57,15 @@ h2 {
   letter-spacing: 0.2rem;
 }
 
+#like-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  color: red;
+  visibility: hidden;
+}
+
 .text-fun-fact {
   margin-top: 2rem;
   color: var(--black);

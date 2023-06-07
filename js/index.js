@@ -1,5 +1,8 @@
 const funFact = document.getElementById("fun-fact");
 const btnfunFact = document.getElementById("fun-fact-btn");
+const likeHeart = document.getElementById("like-heart");
+
+let audio = new Audio("../sounds/typewritter.mp3");
 
 function typeWriterEffect(text, speed) {
   let i = 0;
@@ -8,6 +11,8 @@ function typeWriterEffect(text, speed) {
     i++;
     if (i > text.length) {
       clearInterval(interval);
+      audio.pause();
+      likeHeart.style.visibility = "visible";
     }
   }, speed);
 }
@@ -21,7 +26,10 @@ function getfunFact() {
       return response.json();
     })
     .then(data => {
+      audio.currentTime = 0;
+      audio.play();
       funFact.textContent = "";
+      likeHeart.style.visibility = "hidden";
       typeWriterEffect(data.text, 50);
     })
     .catch(error => {
@@ -29,5 +37,7 @@ function getfunFact() {
     });
 }
 
-btnfunFact.addEventListener("click", getfunFact);
-getfunFact();
+btnfunFact.addEventListener("click", () => {
+  audio.pause();
+  getfunFact();
+});
