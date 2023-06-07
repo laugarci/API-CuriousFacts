@@ -12,6 +12,8 @@
   --black: #151515;
 }
 
+@media (max-width:900px){
+
 body {
   position: relative;
   text-align: center;
@@ -34,8 +36,41 @@ header {
   background-color: var(--dark-yellow);
 }
 
-.header-links {
+.show-menu,
+.esconder-menu {
+    display: block;
+  }
+
+.menu {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background:var(--light-yellow);
+  right: -100%;
+  top:0;
+  text-align: center;
+  padding: 10rem 0px;
+  z-index: 100;
+  transition: 0.8s;
+}
+
+.menu a {
+  display: block;
+  padding: 20px;
+}
+
+.hidden-menu{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+#check {
   display: none;
+}
+
+#check:checked ~ .menu {
+  right: 0;
 }
 
 main {
@@ -112,3 +147,4 @@ h2 {
   height: 3rem;
   margin-top: auto;
   }
+}

@@ -51,7 +51,7 @@ function saveFact(fact) {
     localStorage.setItem(savedFactsKey, JSON.stringify(savedFacts));
   }
   
-  function removeFact(fact) {
+function removeFact(fact) {
     let savedFacts = localStorage.getItem(savedFactsKey);
     if (savedFacts) {
       savedFacts = JSON.parse(savedFacts);
