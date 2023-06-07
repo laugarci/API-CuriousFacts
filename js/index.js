@@ -1,9 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
 const funFact = document.getElementById("fun-fact");
 const btnfunFact = document.getElementById("fun-fact-btn");
 const likeHeart = document.getElementById("like-heart");
 const likeHeartFull = document.getElementById("like-heart-full");
 const savedFactsKey = "savedFacts";
-
 let audio = new Audio("../sounds/typewritter.mp3");
 
 function typeWriterEffect(text, speed) {
@@ -20,25 +20,25 @@ function typeWriterEffect(text, speed) {
 }
 
 function getfunFact() {
-  fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Error HTTP: " + response.status);
-      }
-      return response.json();
-    })
-    .then(data => {
-      audio.currentTime = 0;
-      audio.play();
-      funFact.textContent = "";
-      likeHeart.style.visibility = "hidden";
-      likeHeart.classList.remove("clicked");
-      typeWriterEffect(data.text, 50);
-    })
-    .catch(error => {
-      console.log("error:", error);
-    });
-}
+    fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Error HTTP: " + response.status);
+        }
+        return response.json();
+      })
+      .then(data => {
+        audio.currentTime = 0;
+        audio.play();
+        funFact.textContent = "";
+        likeHeart.style.visibility = "hidden";
+        likeHeart.classList.remove("clicked");
+        typeWriterEffect(data.text, 50);
+      })
+      .catch(error => {
+        console.log("error:", error);
+      });
+  }
 
 function saveFact(fact) {
     let savedFacts = localStorage.getItem(savedFactsKey);
@@ -78,8 +78,13 @@ likeHeartFull.addEventListener("click", () => {
 });
 
 btnfunFact.addEventListener("click", () => {
-  audio.pause();
-  getfunFact();
-  likeHeart.style.visibility = "visible";
-  likeHeartFull.style.visibility = "hidden";
+    audio.pause();
+    getfunFact();
+    likeHeart.style.visibility = "visible";
+    likeHeartFull.style.visibility = "hidden";
+  });
+
+  module.exports = {
+    saveFact,
+  };
 });
