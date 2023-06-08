@@ -42,8 +42,8 @@ header {
   
 }
 
-.mostrar-menu,
-.esconder-menu {
+.show-menu,
+.hidden-menu {
   cursor: pointer;
   transition: 0.4s;
   font-size: 30px;
@@ -54,13 +54,13 @@ header {
   
 }
 
-.mostrar-menu {
+.show-menu {
   order: 1;
 }
 
 .menu a:hover,
-.mostrar-menu:hover,
-.esconder-menu:hover {
+.show-menu:hover,
+.hidden-menu:hover {
   color: #FFffff;
 }
 
@@ -68,8 +68,8 @@ header {
   display: none;
 }
 
-.mostrar-menu,
-.esconder-menu {
+.show-menu,
+.hidden-menu {
   display: block;
 }
 
@@ -92,7 +92,7 @@ header {
   
 }
 
-.esconder-menu {
+.hidden-menu {
   position: absolute;
   top: 40px;
   right: 20px;
@@ -177,8 +177,11 @@ h2 {
   }
 
   footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--dark-yellow);
-  height: 3rem;
+  height: 6rem;
   margin-top: auto;
   color:#FFffff;
   }
@@ -186,7 +189,7 @@ h2 {
   @media (min-width: 900px) {
     
     .mostrar-menu,
-    .esconder-menu {
+    .hidden-menu {
       display: none;
     }
     

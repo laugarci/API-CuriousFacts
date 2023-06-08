@@ -35,8 +35,8 @@ p {
     font-family: 'Itim';
 }
 
-.mostrar-menu,
-.esconder-menu {
+.show-menu,
+.hidden-menu {
     cursor: pointer;
     transition: 0.4s;
     font-size: 30px;
@@ -47,13 +47,13 @@ p {
 }
 
 
-.mostrar-menu {
+.show-menu {
     order: 1;
 }
 
 .menu a:hover,
-.mostrar-menu:hover,
-.esconder-menu:hover {
+.show-menu:hover,
+.hidden-menu:hover {
     color: #FFffff;
 }
 
@@ -61,8 +61,8 @@ p {
     display: none;
 }
 
-.mostrar-menu,
-.esconder-menu {
+.show-menu,
+.hidden-menu {
     display: block;
 }
 
@@ -84,7 +84,7 @@ p {
     padding: 20px;
 }
 
-.esconder-menu {
+.hidden-menu {
     position: absolute;
     top: 40px;
     right: 40px;
@@ -139,19 +139,26 @@ p {
     cursor: pointer;
   }
 
-  footer {
+  f footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--dark-yellow);
-    height: 3rem;
+    height: 6rem;
     margin-top: auto;
     color:#FFffff;
     }
 
+    .container {
+        max-height: 60vh;
+        overflow-y: auto;
+      }
 
 @media (min-width: 900px) {
 
     
-    .mostrar-menu,
-    .esconder-menu {
+    .show-menu,
+    .hidden-menu {
       display: none;
     }
     
