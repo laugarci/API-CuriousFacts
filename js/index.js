@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
 const funFact = document.getElementById("fun-fact");
 const btnfunFact = document.getElementById("fun-fact-btn");
 const likeHeart = document.getElementById("like-heart");
@@ -85,8 +84,3 @@ btnfunFact.addEventListener("click", () => {
     likeHeart.style.visibility = "visible";
     likeHeartFull.style.visibility = "hidden";
   });
-
-  module.exports = {
-    saveFact,
-  };
-});

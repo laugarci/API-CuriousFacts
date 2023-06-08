@@ -1,4 +1,5 @@
-const funFactContainer = document.getElementById("fun-fact");
+
+  const funFactContainer = document.getElementById("fun-fact");
 
   function createDiv() {
     const div = document.createElement("div");
