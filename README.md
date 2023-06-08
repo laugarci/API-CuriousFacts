@@ -23,6 +23,7 @@ The idea of this project is to have, within the main page, the ability to displa
 - HTML
 - CSS
 - Javascript
+- Jest
 
 ### Tools
 
