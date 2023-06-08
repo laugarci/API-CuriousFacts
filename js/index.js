@@ -87,6 +87,6 @@ btnfunFact.addEventListener("click", () => {
   });
 
   module.exports = {
-    saveFact,
+    saveFact
   };
 });
