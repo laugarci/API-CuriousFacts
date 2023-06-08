@@ -188,7 +188,7 @@ h2 {
 
   @media (min-width: 900px) {
     
-    .mostrar-menu,
+    .show-menu,
     .hidden-menu {
       display: none;
     }
