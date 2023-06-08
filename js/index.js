@@ -70,6 +70,8 @@ likeHeart.addEventListener("click", () => {
   saveFact(fact);
 });
 
+
+
 likeHeartFull.addEventListener("click", () => {
   const fact = funFact.textContent;
   removeFact(fact);
