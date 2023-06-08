@@ -30,6 +30,28 @@ p{
     
 }
 
+p{
+    color: black;
+}
+
+.text-fun-favorites {
+    margin-top: 2rem;
+    color: #0000;
+    font-size: 18px;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 6px #C6C6C6;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'Another Typewriter';
+    letter-spacing: 0.3rem;
+    position: relative;
+  }
+    
+
+
 .mostrar-menu{
     order: 1;
 }
