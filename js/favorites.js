@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const funFactContainer = document.getElementById("fun-fact");
+const funFactContainer = document.getElementById("fun-fact");
 
   function createDiv() {
     const div = document.createElement("div");
@@ -61,4 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log("Error al analizar el JSON de savedFacts:", error);
     }
   }
-});
+
+  module.exports = {
+    createDiv,
+    createParagraph,
+    createCrossMark,
+  };

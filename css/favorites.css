@@ -1,12 +1,23 @@
+:root {
+    --light-yellow: #FFAD2B;
+    --dark-yellow: #B56F00;
+    --red: #F23030;
+    --black: #151515;
+  }
+
 header {
     display: flex;
     justify-content: space-between;
 }
 
 p {
-    color: #ffffff;
+    color:var(--black);
     font-size: 15px;
     font-family: 'Itim'; 
+}
+
+.text-color{
+    color: #FFffff;
 }
 
 #scroll {
@@ -37,9 +48,6 @@ p {
     
 }
 
-p {
-    color: black;
-}
 
 .mostrar-menu {
     order: 1;
@@ -54,6 +62,40 @@ p {
 #check{
     display: none;
 }
+
+.mostrar-menu,
+.esconder-menu {
+    display: block;
+}
+
+.menu {
+    position: fixed;
+    width: 70%;
+    height: 10vh;
+    background:var(--light-yellow);
+    right: -100%;
+    top:0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+}
+
+.menu a {
+    display: block;
+    padding: 20px;
+}
+
+.esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+#check:checked ~ .menu{
+    right: 0;
+}
+
 
 .fun-fact-box {
     margin-top: 2rem;
@@ -99,35 +141,37 @@ p {
     cursor: pointer;
   }
 
-.mostrar-menu,
-.esconder-menu {
-    display: block;
-}
+  footer {
+    background-color: var(--dark-yellow);
+    height: 3rem;
+    margin-top: auto;
+    color:#FFffff;
+    }
 
-.menu {
-    position: fixed;
-    width: 70%;
-    height: 10vh;
-    background:var(--light-yellow);
-    right: -100%;
-    top:0;
-    text-align: center;
-    padding: 100px 0px;
-    z-index: 100;
-    transition: 0.8s;
-}
 
-.menu a {
-    display: block;
-    padding: 20px;
-}
+@media (min-width: 900px) {
 
-.esconder-menu {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-}
+    
+    .mostrar-menu,
+    .esconder-menu {
+      display: none;
+    }
+    
+    .menu {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      padding: 20px;
+      transition: none;
+    }
+    
+    .menu a {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
 
-#check:checked ~ .menu{
-    right: 0;
-}
+  
+  
+  
