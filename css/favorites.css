@@ -69,6 +69,34 @@ p {
     font-family: 'Another Typewriter';
     letter-spacing: 0.3rem;
     position: relative;
+}
+
+#like-heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 35px;
+    cursor: pointer;
+    visibility: hidden;
+}
+  
+.cross-mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: grey;
+    cursor: pointer;
+  }
+
+  
+#like-heart-full {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    cursor: pointer;
   }
   
 @media (max-width:900px) {
