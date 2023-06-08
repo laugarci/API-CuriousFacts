@@ -2,7 +2,6 @@
   font-family: 'Another Typewriter';
   src: url('/fonts/atwriter.ttf') format('truetype');
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
 :root {
@@ -27,9 +26,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 4rem;
-  width: 100%;
+  justify-content: space-around;
   color: white;
   background-color: var(--dark-yellow);
 }
@@ -37,6 +34,7 @@ header {
 .show-menu,
 .esconder-menu {
     display: block;
+    cursor: pointer;
   }
 
 .menu {
@@ -106,6 +104,11 @@ h2 {
   font-size: 35px;
   cursor: pointer;
   visibility: hidden;
+}
+
+.content {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .text-fun-fact {

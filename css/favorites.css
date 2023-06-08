@@ -21,8 +21,7 @@ p {
     text-decoration: none;
     padding: 0 10px;
     transition: 0.4s;
-    font-family: 'Itim'; 
-    
+    font-family: 'Itim';
 }
 
 .mostrar-menu,
@@ -34,7 +33,6 @@ p {
     text-transform: uppercase;
     color: white;
     margin: 0px 10px;
-    
 }
 
 p {
