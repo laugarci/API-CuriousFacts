@@ -12,8 +12,6 @@
   --black: #151515;
 }
 
-@media (max-width:900px){
-
 body {
   position: relative;
   text-align: center;
@@ -147,4 +145,3 @@ h2 {
   height: 3rem;
   margin-top: auto;
   }
-}

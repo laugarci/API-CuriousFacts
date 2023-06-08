@@ -98,8 +98,6 @@ p {
     font-size: 35px;
     cursor: pointer;
   }
-  
-@media (max-width:900px) {
 
 .mostrar-menu,
 .esconder-menu {
@@ -132,4 +130,4 @@ p {
 
 #check:checked ~ .menu{
     right: 0;
-}}
+}
