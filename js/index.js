@@ -83,4 +83,6 @@ function handleBtnFunFactClick() {
 
 module.exports = {
   handleLikeHeartClick,
+  handleBtnFunFactClick,
+  handleLikeHeartFullClick
 };
