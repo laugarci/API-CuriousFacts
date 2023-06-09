@@ -3,7 +3,6 @@ const likeHeart = document.getElementById("like-heart");
 const likeHeartFull = document.getElementById("like-heart-full");
 const savedFactsKey = "savedFacts";
 let audio = new Audio("../sounds/typewritter.mp3");
-
 function typeWriterEffect(text, speed) {
   let i = 0;
   const interval = setInterval(() => {

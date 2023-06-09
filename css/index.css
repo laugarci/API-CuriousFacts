@@ -181,7 +181,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: var(--dark-yellow);
-  height: 6rem;
+  height: 4rem;
   margin-top: auto;
   color:#FFffff;
   }
@@ -206,4 +206,22 @@ h2 {
       display: inline-block;
       padding: 20px;
     }
+
+    header {
+      height: 5rem;
+      width: 100%;
+    }
+
+    main {
+      height: 15rem;
+    }
+
+    .text-fun-fact {
+      margin-top: 4rem;
+      font-size: 22px;
+      padding: 1.5rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
   }
