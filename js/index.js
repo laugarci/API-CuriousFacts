@@ -1,5 +1,4 @@
 const funFact = document.getElementById("fun-fact");
-const btnfunFact = document.getElementById("fun-fact-btn");
 const likeHeart = document.getElementById("like-heart");
 const likeHeartFull = document.getElementById("like-heart-full");
 const savedFactsKey = "savedFacts";
@@ -62,25 +61,27 @@ function removeFact(fact) {
     }
   }
 
-likeHeart.addEventListener("click", () => {
+function handleLikeHeartClick() {
   likeHeart.style.visibility = "hidden";
   likeHeartFull.style.visibility = "visible";
   const fact = funFact.textContent;
   saveFact(fact);
-});
+}
 
-
-
-likeHeartFull.addEventListener("click", () => {
+function handleLikeHeartFullClick() {
   const fact = funFact.textContent;
   removeFact(fact);
   likeHeart.style.visibility = "visible";
   likeHeartFull.style.visibility = "hidden";
-});
+}
 
-btnfunFact.addEventListener("click", () => {
-    audio.pause();
-    getfunFact();
-    likeHeart.style.visibility = "visible";
-    likeHeartFull.style.visibility = "hidden";
-  });
+function handleBtnFunFactClick() {
+  audio.pause();
+  getfunFact();
+  likeHeart.style.visibility = "visible";
+  likeHeartFull.style.visibility = "hidden";
+}
+
+module.exports = {
+  handleLikeHeartClick,
+};

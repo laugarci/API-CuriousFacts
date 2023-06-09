@@ -66,4 +66,6 @@
     createDiv,
     createParagraph,
     createCrossMark,
+    removeFunFact,
+    createFunFactElement,
   };
