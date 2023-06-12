@@ -81,9 +81,7 @@ function BtnFunFactClick() {
   getfunFact();
   likeHeart.style.visibility = "visible";
   likeHeartFull.style.visibility = "hidden";
-  LikeHeartFullClick(textContent);
 }
-
 
 module.exports = {
   BtnFunFactClick,
