@@ -1,5 +1,5 @@
 # API Curious Facts
-The idea of this project is to have, within the main page, the ability to display each interesting fact returned by the API https://uselessfacts.jsph.pl/. If we like an interesting fact, we can save it in a favorite space on the favorites page.
+The idea of this project is to have, within the main page, the ability to display each interesting fact returned by API. If we like an interesting fact, we can save it in a favorite space on the favorites page. You can view this project at the following link: https://curiousfacts.netlify.app/
 
 ## Table of contents:
 
