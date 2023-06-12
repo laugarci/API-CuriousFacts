@@ -3,6 +3,7 @@ const likeHeart = document.getElementById("like-heart");
 const likeHeartFull = document.getElementById("like-heart-full");
 const savedFactsKey = "savedFacts";
 let audio = new Audio("../sounds/typewritter.mp3");
+
 function typeWriterEffect(text, speed) {
   let i = 0;
   const interval = setInterval(() => {
@@ -60,29 +61,33 @@ function removeFact(fact) {
     }
   }
 
-function handleLikeHeartClick() {
+function LikeHeartClick() {
   likeHeart.style.visibility = "hidden";
   likeHeartFull.style.visibility = "visible";
   const fact = funFact.textContent;
   saveFact(fact);
 }
 
-function handleLikeHeartFullClick() {
+function LikeHeartFullClick() {
   const fact = funFact.textContent;
   removeFact(fact);
   likeHeart.style.visibility = "visible";
   likeHeartFull.style.visibility = "hidden";
 }
 
-function handleBtnFunFactClick() {
+function BtnFunFactClick() {
   audio.pause();
+  const textContent = funFact.textContent;
   getfunFact();
   likeHeart.style.visibility = "visible";
   likeHeartFull.style.visibility = "hidden";
+  LikeHeartFullClick(textContent);
 }
 
+
 module.exports = {
-  handleBtnFunFactClick,
-  handleLikeHeartFullClick,
-  handleLikeHeartClick
+  BtnFunFactClick,
+  LikeHeartFullClick,
+  LikeHeartClick,
+  getfunFact,
 };
