@@ -38,8 +38,7 @@ header {
   text-decoration: none;
   padding: 0 10px;
   transition: 0.4s;
-  font-family: 'Itim'; 
-  
+  font-family: 'Itim';
 }
 
 .show-menu,
@@ -107,7 +106,7 @@ main {
   position: relative;
   left: 0;
   right: 0;
-  height: 12rem;
+  height: 11rem;
   background-color: var(--light-yellow);
   border-radius: 0% 0% 80% 80%;
   color: white;
