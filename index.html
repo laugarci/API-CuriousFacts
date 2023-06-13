@@ -9,14 +9,14 @@
 </head>
 <body>
     <header>
-        <a href="/html/index.html"><img src="/img/logo.png" alt="logo"></a>
+        <a href="./index.html"><img src="/img/logo.png" alt="logo"></a>
         <input type="checkbox" id="check">
         <label for="check" class="show-menu">
             &#8801;
         </label>
 
     <nav class="menu">    
-    <a href="/html/index.html" alt="button to go to main menu">Home</a>
+    <a href="./index.html" alt="button to go to main menu">Home</a>
     <a href="/html/favorites.html" alt="button to go to your favorites">Favorites</a>
     <label for="check" class="hidden-menu">
     &#215;
@@ -26,13 +26,13 @@
     <main>
         <h2>CURIOSITIES</h2>
         <div class="text-fun-fact">
-            <div id="like-heart">&#x2661;</div>
-            <div id="like-heart-full">&#x2665;</div>
+            <div id="like-heart" onclick="LikeHeartClick()">&#x2661;</div>
+            <div id="like-heart-full" onclick="LikeHeartFullClick()">&#x2665;</div>
             <div class="content">
             <p id="fun-fact">Click the 'Fun Fact' button for a new curiosity.</p>
             </div>
         </div>
-        <button class="btn-fun-fact" id="fun-fact-btn">Fun Fact</button>
+        <button class="btn-fun-fact" id="fun-fact-btn" onclick="BtnFunFactClick()">Fun Fact</button>
     </main>
     <footer>
         <p>Copyright Oficial © Laura - Rous</p>

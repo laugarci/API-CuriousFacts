@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "fast-text-encoding": "^1.0.6",
+    "fetch-mock": "^9.11.0",
     "node-fetch": "^3.3.1"
   }
 }

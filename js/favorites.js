@@ -41,7 +41,6 @@
     const div = createDiv();
     const paragraph = createParagraph(text);
     const crossMark = createCrossMark(text, div);
-
     div.appendChild(crossMark);
     div.appendChild(paragraph);
     return div;
